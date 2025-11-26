@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Commerce · Conversational Checkout for WhatsApp</title>
+  <meta name="description" content="AI-powered commerce for WhatsApp. Convert chats into orders, upsell intelligently, and collect payments without stress." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4f46e5;
+      --primary-dark:#4338ca;
+      --bg:#f4f7ff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);}
+
+    /* Layout */
+    header{padding:32px 8%;display:flex;justify-content:space-between;align-items:center;animation:fadeIn 1s}
+    header .brand{font-weight:700;font-size:24px;color:var(--primary);display:flex;align-items:center;gap:10px}
+
+    nav a{margin-left:20px;text-decoration:none;color:var(--text);font-weight:500}
+
+    .hero{
+      padding:80px 8%;display:flex;justify-content:space-between;gap:40px;align-items:center;
+      animation:fadeUp 1s;
+    }
+    .hero-left{max-width:520px}
+
+    .title{font-size:52px;font-weight:700;line-height:1.1;margin-bottom:18px;}
+    .title span{color:var(--primary)}
+
+    .subtitle{font-size:18px;color:var(--muted);margin-bottom:32px}
+
+    .btn{padding:14px 22px;border-radius:14px;font-weight:600;text-decoration:none;font-size:16px;display:inline-block;transition:.2s}
+    .btn-primary{background:var(--primary);color:white}
+    .btn-primary:hover{background:var(--primary-dark)}
+    .btn-outline{border:2px solid var(--primary);color:var(--primary)}
+    .btn-outline:hover{background:var(--primary);color:white}
+
+    /* big feature card */
+    .device-frame{
+      width:380px;background:white;padding:22px;border-radius:32px;box-shadow:0 20px 45px rgba(0,0,0,0.12);
+      height:560px;display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .chat-bubble{padding:14px 18px;border-radius:16px;margin-bottom:10px;max-width:80%;font-size:14px}
+    .bot{background:#eef0ff;align-self:flex-start}
+    .user{background:#dff9e5;align-self:flex-end}
+
+    /* Features section */
+    .features{padding:80px 8%;text-align:center}
+    .section-title{font-size:36px;font-weight:700;margin-bottom:50px}
+
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+    .feature-card{background:var(--card);padding:28px;border-radius:22px;box-shadow:0 12px 28px rgba(0,0,0,0.05);transition:.3s}
+    .feature-card:hover{transform:translateY(-6px)}
+    .feature-card h3{font-size:20px;margin-bottom:10px;color:var(--primary)}
+    .feature-card p{color:var(--muted);font-size:15px}
+
+    /* CTA section */
+    .cta-section{text-align:center;padding:100px 8%}
+    .cta-box{background:var(--primary);color:white;padding:70px;border-radius:28px}
+    .cta-box h2{font-size:40px;margin-bottom:20px}
+
+    footer{text-align:center;padding:40px 0;margin-top:40px;color:var(--muted)}
+
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+    @media(max-width:900px){
+      .hero{flex-direction:column;text-align:center}
+      .device-frame{margin-top:40px;width:90%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">AI Commerce</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#demo">Demo</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1 class="title">Turn WhatsApp Into a <span>Fully Automated</span> Sales Machine</h1>
+      <p class="subtitle">Connect your WhatsApp number, let AI chat with customers, process orders, and handle payments — all without you touching your phone.</p>
+
+      <a class="btn btn-primary" href="#connect">Get Started Free</a>
+      <a class="btn btn-outline" style="margin-left:12px" href="#demo">See Demo</a>
+    </div>
+
+    <div class="device-frame">
+      <div>
+        <div class="chat-bubble bot">Hello 👋 I'm your AI sales assistant. What are you looking for today?</div>
+        <div class="chat-bubble user">Show me your best deals.</div>
+        <div class="chat-bubble bot">Here are today's specials: 🔥</div>
+        <div class="chat-bubble bot">1. Spicy Chicken — GH¢25<br>2. Veggie Bowl — GH¢18</div>
+        <div class="chat-bubble user">I'll take the Spicy Chicken.</div>
+        <div class="chat-bubble bot">Great choice! Would you like to add fries for GH¢5?</div>
+      </div>
+      <div class="chat-bubble bot" style="margin-top:auto">Ready to checkout? Tap the button I send. 💳</div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2 class="section-title">Why Businesses Love AI Commerce</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Instant WhatsApp Integration</h3>
+        <p>Connect any WhatsApp number in under 2 minutes — no coding, no approvals, no stress.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI Conversational Sales</h3>
+        <p>Your assistant handles product questions, upsells, custom orders, and delivery details.</p>
+      </div>
+      <div class="feature-card">
+        <h3>In‑Chat Payments</h3>
+        <p>Collect payments seamlessly through Stripe, Paystack, Momo or PayPal.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Order Dashboard</h3>
+        <p>Track conversations, sales, and abandoned carts with real‑time analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-box">
+      <h2>Ready to Automate Your WhatsApp Sales?</h2>
+      <p style="margin-bottom:32px;font-size:18px;opacity:.9">Let your AI handle chats while you focus on fulfillment.</p>
+      <a class="btn btn-outline" style="background:white;color:var(--primary)" href="#connect">Start Free</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AI Commerce — Built for African & global businesses.
+  </footer>
+</body>
+</html>
